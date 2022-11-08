@@ -2,7 +2,7 @@
 
 let distance, num_changes, ticket_final_price, ticket_number, seat_number, distanza;
 
-num_changes= Math.floor (Math.random() * 3) -1;
+num_changes= Math.floor (Math.random() * 3);
 ticket_number= Math.floor (Math.random() * 99999999) + 11111111;
 seat_number= Math.floor (Math.random() * 50) +1;
 distance= Math.floor (Math.random() * 500) +50;
