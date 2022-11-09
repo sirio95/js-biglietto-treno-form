@@ -8,54 +8,69 @@
     <title>Biglietto Treno</title>
 </head>
 <body>
+    <header>
+        <div id="titolo">
+            <h1>Scegli anche tu le rotaie</h1>
+            <h2>Scopri fantastici sconti per i tuoi viaggi</h2>
+        </div>
+    </header>
     <main>
-        <section id="passenger_data">
-            <h1></h1>
-
-            <label for="v_nome">Nome del viaggiatore</label>
-            <input type="text" id="nome1" placeholder="Nome" name="in_name">
-            <label for="cognome1">Cognome del viaggiatore</label>
-            <input type="text" id="cognome1" placeholder="Cognome" name="in_surname">
-            <label for="partenza">Stazione di partenza</label>
-            <input type="text" id="partenza" placeholder="Stazione di..." name="departure">
-            <label for="arrivo">Stazione di destinazione</label>
-            <input type="text" id="arrivo" placeholder="Stazione di..." name="arrival">
-            <label for="eta">Et&agrave; del viaggiatore</label>
-            <input type="number" id="eta" name="age">
-            <label for="class">Scegli la classe</label>
-            <select name="dropdown" id="class">
-                <option value="Seconda Classe">Seconda classe</option>
-                <option value="Prima Classe">Prima classe</option>
-                <option value="Business Class">Business class</option>
-            </select>
-            <button type="submit" id="all_data_necessary" onclick="my_Function()">Crea il tuo biglietto</button>
-            <button type="reset" onclick="window.location.reload(true);">Cerca un altro viaggio</button>      
+        <section id="passenger_data">        
+            <div class="row">
+                <div class="col">
+                    <label for="v_nome">Nome del viaggiatore</label>
+                    <input type="text" id="nome1" placeholder="Nome" name="in_name">
+                    <label for="cognome1">Cognome del viaggiatore</label>
+                    <input type="text" id="cognome1" placeholder="Cognome" name="in_surname">
+                </div>
+                <div class="col">
+                    
+                </div>
+                <div class="col">
+                    <label for="partenza">Stazione di partenza</label>
+                    <input type="text" id="partenza" placeholder="Stazione di..." name="departure">
+                    <label for="arrivo">Stazione di destinazione</label>
+                    <input type="text" id="arrivo" placeholder="Stazione di..." name="arrival">
+                </div>
+                <div class="col">
+                    <label for="eta">Et&agrave; del viaggiatore</label>
+                    <input type="number" id="eta" name="age">
+                    <label for="class">Scegli la classe</label>
+                    <select name="dropdown" id="class">
+                        <option value="Seconda Classe">Seconda Classe</option>
+                        <option value="Prima Classe">Prima Classe</option>
+                        <option value="Business Class">Business Class</option>
+                    </select>       
+                </div>
+                <div class="col">
+                    <button type="submit" id="all_data_necessary" onclick="my_Function()">Crea il tuo biglietto</button>
+                    <button type="reset" onclick="window.location.reload(true);">Cerca un altro viaggio</button> 
+                </div>
+            </div>
+                 
             
         </section>
         <section id="ticket_data">
-            <p>Viaggiatore <div id="b_nome"></div> <div id="b_cognome"></div> di anni <div id="eta_passeggero"></div></p>
-            <p>Treno da <div id="b_partenza"></div> a <div id="b_arrivo"></div></p>
-            <p>Distanza da percorrere di <div id="b_distanza"></div></p>
-            <p>
-                Viaggio in
-                <div id="b_class"></div>
-            </p>
-            <p>
-                Costo biglietto
-                <div id="prezzo"></div>
-                sconto
-                <div id="discount"></div>
-                Prezzo scontato
-                <div id="ticket-final"></div>
-            </p>
-            <p>
-                Cambi previsti
-                <div id="cambi"></div>
-                numero posto
-                <div id="posto"></div>
-                numero biglietto
-                <div id="n_biglietto"></div>
-            </p>
+            <div class="identita">
+                <h2>Viaggiatore</h2>
+                <div>Nome: <div id="b_nome"></div></div>
+                <div>Cognome: <div id="b_cognome"></div></div>
+                <div>Et&agrave;: <div id="eta_passeggero"></div> anni</div>
+            </div>
+            <div class="specifiche">
+                <h2>Da: <div id="b_partenza"></div> A: <div id="b_arrivo"></div></h2>
+                <div class="col seconda">
+                    <div>Numero biglietto: <div id="n_biglietto"></div></div>
+                    <div>Carrozza: <div id="cambi"></div></div>
+                    <div>Posto: <div id="posto"></div></div>
+                </div>
+                
+                <div class="col seconda">
+                    <div>Costo Biglietto: <div id="prezzo"></div></div>
+                    <div>Sconto: <div id="discount"></div></div>
+                    <div>Prezzo Scontato: <div id="ticket-final"></div></div>
+                </div>
+            </div>
         </section>
     </main>
     <script src="js/script.js"></script>

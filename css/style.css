@@ -8,3 +8,140 @@ body{
     font-size: 18px;
 }
 
+header{
+    width:100%;
+    height:150px;
+    background-image: url(https://www.luxurypretaporter.it/wp-content/uploads/2020/10/tor-3842141_1920-900x675.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:10px 0;
+}
+
+#titolo{
+    width:50%;
+    height:80%;
+    margin: auto;
+    background-color: #fff;
+    opacity: 0.5;
+    border:1px solid #000;
+    border-radius: 25px;
+}
+
+#titolo h1, #titolo h2{
+    color:red;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 20px;
+    opacity: 1;
+}
+
+main{
+    margin: 0 15%;
+}
+
+#passenger_data{
+    width:100%;
+    height:300px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color:#a6160a;
+    padding-top:20px;
+    margin-top:30px;
+    position:relative;
+}
+.row{
+    width:100%;
+}
+
+.col{
+    width:100%;
+    height:50px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+label{
+    color:#fff;
+    font-size:20px;
+}
+input{
+    color:#000;
+    font-size: 22px;
+    border-radius: 10px;
+    font-size:22px;
+}
+select{
+    border-radius: 10px;
+    font-size:22px;
+}
+
+button{
+    font-size: 26px;
+    background-color:cornflowerblue;
+    color:#fff;
+    border-radius: 25px;
+    padding: 5px;
+    margin-top: 30px;
+    box-shadow: 2px 2px #000;
+}
+button:hover{
+    background-color: rgb(120, 161, 237);
+    transform: scale(1.1);
+}
+
+
+#ticket_data{
+    width:70%;
+    height:300px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin-top:30px;
+    display:flex;
+    position:absolute;
+    top:150px;
+    left:15%;
+    display:none;
+}
+.identita{
+    height:100%;
+    width:40%;
+    background-color: lightslategray;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left:15px;
+}
+.identita h2{
+    padding: 20px 5px;
+}
+.identita div{
+    font-size:20px;
+    margin-top:10px;
+}
+
+.col.seconda{
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+#b_nome, #b_cognome, #eta_passeggero, #b_partenza, #b_arrivo, #n_biglietto, #cambi, #posto, #prezzo, #discount, #ticket_final{
+    display:inline-block;
+    font-size: 24px;
+    font-weight:bold;
+}
+
+.specifiche{
+    height:100%;
+    width:60%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left:15px;
+    background-color: #bfba9c;
+}
+.specifiche h2{
+    padding: 20px 5px;
+}
+.specifiche div{
+    font-size:20px;
+    margin-top:5px;
+    padding: 5px;
+}

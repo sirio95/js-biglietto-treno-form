@@ -13,17 +13,9 @@ function my_Function() {
     var departure= document.querySelector("#partenza");
     var arrival= document.querySelector("#arrivo");
     var eta= document.querySelector("#eta").value;
-    var classe= document.querySelector("#class");
     var class_value= document.querySelector("#class").value;
 
-    document.getElementById("b_nome").innerHTML= in_name.value;
-    document.getElementById("b_cognome").innerHTML= in_surname.value;
-    document.getElementById("b_partenza").innerHTML= departure.value;
-    document.getElementById("b_arrivo").innerHTML= arrival.value;
-    document.getElementById("eta_passeggero").innerHTML = eta;
-    document.getElementById("b_class").innerHTML = classe.value;
-
-    num_changes= Math.floor (Math.random() * 3);
+    num_changes= Math.floor (Math.random() * 8) +1;
     ticket_number= Math.floor (Math.random() * 99999999) + 11111111;
     seat_number= Math.floor (Math.random() * 50) +1;
     distance= Math.floor (Math.random() * 800) +50;
@@ -121,10 +113,16 @@ function my_Function() {
     }
     console.log(ticket_final_price);
 
-    document.getElementById("b_distanza").innerHTML= `${distance}`;
+    document.getElementById("b_nome").innerHTML= in_name.value;
+    document.getElementById("b_cognome").innerHTML= in_surname.value;
+    document.getElementById("b_partenza").innerHTML= departure.value;
+    document.getElementById("b_arrivo").innerHTML= arrival.value;
+    document.getElementById("eta_passeggero").innerHTML= eta;
+    document.getElementById("b_class").innerHTML= class_value;
     document.getElementById("cambi").innerHTML= `${num_changes}`;
     document.getElementById("posto").innerHTML= `${seat_number}`;
     document.getElementById("n_biglietto").innerHTML= `${ticket_number}`;
+    document.getElementById("ticket_data").style.display = "block";
 }
 
 
