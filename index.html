@@ -22,13 +22,24 @@
             <input type="text" id="arrivo" placeholder="Stazione di..." name="arrival">
             <label for="eta">Et&agrave; del viaggiatore</label>
             <input type="number" id="eta" name="age">
+            <label for="class">Scegli la classe</label>
+            <select name="dropdown" id="class">
+                <option value="Seconda Classe">Seconda classe</option>
+                <option value="Prima Classe">Prima classe</option>
+                <option value="Business Class">Business class</option>
+            </select>
             <button type="submit" id="all_data_necessary" onclick="my_Function()">Crea il tuo biglietto</button>
             <button type="reset" onclick="window.location.reload(true);">Cerca un altro viaggio</button>      
             
         </section>
         <section id="ticket_data">
             <p>Viaggiatore <div id="b_nome"></div> <div id="b_cognome"></div> di anni <div id="eta_passeggero"></div></p>
-            <p>Treno da <div id="b_partenza"></div> a <div id="b_arrivo"></div>. Distanza da percorrere di <div id="b_distanza"></div></p>
+            <p>Treno da <div id="b_partenza"></div> a <div id="b_arrivo"></div></p>
+            <p>Distanza da percorrere di <div id="b_distanza"></div></p>
+            <p>
+                Viaggio in
+                <div id="b_class"></div>
+            </p>
             <p>
                 Costo biglietto
                 <div id="prezzo"></div>
