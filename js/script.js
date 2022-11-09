@@ -29,8 +29,8 @@ function my_Function() {
     distance= Math.floor (Math.random() * 800) +50;
 
     const price= 0.21;
-    const ticket_fullprice= distance * price;
-    const ticket_fullprice_show= Math.round((ticket_fullprice)* 100) / 100;
+    let ticket_fullprice= distance * price;
+    let ticket_fullprice_show= Math.round((ticket_fullprice)* 100) / 100;
     const discount_under= ticket_fullprice * 0.2;
     const discount_over= ticket_fullprice * 0.4;
 
@@ -62,7 +62,9 @@ function my_Function() {
         document.getElementById("ticket-final").innerHTML = `${ticket_final_price_show} &euro;`;
 
     }else if(eta < 18 && class_value === "Prima Classe"){
-        ticket_final_price = (ticket_fullprice - discount_under)* 1.2;
+        ticket_fullprice= distance * price * 1.2;
+        ticket_fullprice_show= Math.round((ticket_fullprice)* 100) / 100;
+        ticket_final_price = ticket_fullprice - discount_under;
         ticket_final_price_show = Math.round((ticket_final_price) *100 ) / 100;
         document.getElementById("prezzo").innerHTML = `${ticket_fullprice_show} &euro;`;
         document.getElementById("discount").innerHTML = `-20&percnt;`;
@@ -70,7 +72,9 @@ function my_Function() {
 
 
     }else if(eta > 18 && eta < 65 && class_value === "Prima Classe"){
-        ticket_final_price = ticket_fullprice *  1.2;
+        ticket_fullprice= distance * price * 1.2;
+        ticket_fullprice_show= Math.round((ticket_fullprice)* 100) / 100;
+        ticket_final_price = ticket_fullprice;
         ticket_final_price_show = Math.round((ticket_final_price) *100 ) / 100;
         document.getElementById("prezzo").innerHTML = `${ticket_fullprice_show} &euro;`;
         document.getElementById("discount").innerHTML = `Nessuno sconto disponibile`;
@@ -78,14 +82,18 @@ function my_Function() {
 
 
     }else if(eta > 65 && class_value === "Prima Classe"){
-        ticket_final_price = Math.round(ticket_fullprice - discount_over)* 1.2;
+        ticket_fullprice= distance * price * 1.2;
+        ticket_fullprice_show= Math.round((ticket_fullprice)* 100) / 100;
+        ticket_final_price = ticket_fullprice - discount_over;
         ticket_final_price_show = Math.round((ticket_final_price) *100 ) / 100;
         document.getElementById("prezzo").innerHTML = `${ticket_fullprice_show} &euro;`
         document.getElementById("discount").innerHTML = `-40&percnt;`
         document.getElementById("ticket-final").innerHTML = `${ticket_final_price_show} &euro;
         `
     }else if(eta < 18 && class_value === "Business Class"){
-        ticket_final_price = (ticket_fullprice - discount_under)* 1.4;
+        ticket_fullprice= distance * price * 1.4;
+        ticket_fullprice_show= Math.round((ticket_fullprice)* 100) / 100;
+        ticket_final_price = ticket_fullprice - discount_under;
         ticket_final_price_show = Math.round((ticket_final_price) *100 ) / 100;
         document.getElementById("prezzo").innerHTML = `${ticket_fullprice_show} &euro;`
         document.getElementById("discount").innerHTML = `-20&percnt;`
@@ -93,7 +101,9 @@ function my_Function() {
 
 
     }else if(eta > 18 && eta < 65 && class_value === "Business Class"){
-        ticket_final_price = ticket_fullprice * 1.4;
+        ticket_fullprice= distance * price * 1.4;
+        ticket_fullprice_show= Math.round((ticket_fullprice)* 100) / 100;
+        ticket_final_price = ticket_fullprice;
         ticket_final_price_show = Math.round((ticket_final_price) *100 ) / 100;
         document.getElementById("prezzo").innerHTML = `${ticket_fullprice_show} &euro;`
         document.getElementById("discount").innerHTML = `Nessuno sconto disponibile`
@@ -101,7 +111,9 @@ function my_Function() {
 
 
     }else if(eta > 65 && class_value === "Business Class"){
-        ticket_final_price = (ticket_fullprice - discount_over)* 1.4;
+        ticket_fullprice= distance * price * 1.4;
+        ticket_fullprice_show= Math.round((ticket_fullprice)* 100) / 100;
+        ticket_final_price = ticket_fullprice - discount_over;
         ticket_final_price_show = Math.round((ticket_final_price) *100 ) / 100;
         document.getElementById("prezzo").innerHTML = `${ticket_fullprice_show} &euro;`
         document.getElementById("discount").innerHTML = `-40&percnt;`
